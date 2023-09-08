@@ -1,0 +1,31 @@
+{
+  "runtimeOptions": {
+    "tfm": "net7.0",
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "7.0.10"
+      },
+      {
+        "name": "Microsoft.WindowsDesktop.App",
+        "version": "7.0.10"
+      },
+      {
+        "name": "Microsoft.Maui.Core",
+        "version": "**FromWorkload**"
+      },
+      {
+        "name": "Microsoft.Maui.Controls",
+        "version": "**FromWorkload**"
+      },
+      {
+        "name": "Microsoft.Maui.Essentials",
+        "version": "**FromWorkload**"
+      }
+    ],
+    "configProperties": {
+      "System.Reflection.NullabilityInfoContext.IsSupported": true,
+      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
+    }
+  }
+}

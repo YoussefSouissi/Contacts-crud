@@ -1,0 +1,47 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ContactApiDemo"
+             xmlns:models="clr-namespace:ContactsApiDemo.Models"
+             x:Class="ContactsApiDemo.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+
+            
+            <StackLayout >
+                <Label Text="Add New Contact" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+
+               
+                <Entry x:Name="fullNameEntry" Placeholder="Full Name"  />
+                <Entry x:Name="emailEntry" Placeholder="Email" />
+                <Entry x:Name="phoneEntry" Placeholder="Phone" />
+                <Entry x:Name="addressEntry" Placeholder="Address"  />
+
+                <Button Text="Add Contact" Clicked="OnAddContactClicked" HorizontalOptions="CenterAndExpand" />
+                <Button Text="Update" TextColor="White" BackgroundColor="Blue" HorizontalOptions="EndAndExpand" Clicked="OnUpdateClicked" />
+            </StackLayout>
+
+            <ListView x:Name="contactsListView" VerticalOptions="FillAndExpand" SelectedItem="{Binding SelectedContact}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+
+                                <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding FullName}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Email}" FontAttributes="Italic" />
+                                    <Label Text="{Binding PhoneNumber}" />
+                                    <Label Text="{Binding Adress}" />
+                                </StackLayout>
+
+                                
+                                <Button Text="Delete" BackgroundColor="Red" TextColor="White" HorizontalOptions="EndAndExpand" Clicked="OnDeleteClicked" CommandParameter="{Binding Id}" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

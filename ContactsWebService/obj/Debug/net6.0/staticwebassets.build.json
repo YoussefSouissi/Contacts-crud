@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Nl/YvaUzvVNMn2wKrYJNgeda4EsAMYT9z+cSqFPyMvg=",
+  "Source": "ContactsWebService",
+  "BasePath": "_content/ContactsWebService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
